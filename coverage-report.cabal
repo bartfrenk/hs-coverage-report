@@ -20,3 +20,15 @@ test-suite test-a-test
     hs-source-dirs:   test-a/test
     main-is:          MyLibTest.hs
     build-depends:    base ^>=4.14.3.0
+
+test-suite test-b-test
+    default-language: Haskell2010
+    build-depends:    QuickCheck,
+                      coverage-report,
+                      tasty,
+                      tasty-hunit,
+                      tasty-quickcheck
+    type:             exitcode-stdio-1.0
+    hs-source-dirs:   test-b/test
+    main-is:          MyLibTest.hs
+    build-depends:    base ^>=4.14.3.0
