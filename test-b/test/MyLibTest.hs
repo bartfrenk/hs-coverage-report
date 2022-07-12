@@ -6,6 +6,7 @@ import           Test.Tasty.HUnit
 import           Test.Tasty.QuickCheck
 
 import           MyLib                 (minus)
+import           MyLibB                (minusB)
 
 main :: IO ()
 main = defaultMain tests
@@ -16,6 +17,9 @@ tests = testProperty "add x y = add y x" prop_minusIsAlmostCommutatitive
 
 prop_minusIsAlmostCommutatitive :: Int -> Int -> Property
 prop_minusIsAlmostCommutatitive x y = minus x y === - minus y x
+
+prop_minusBIsAlmostCommutatitive :: Int -> Int -> Property
+prop_minusBIsAlmostCommutatitive x y = minusB x y === - minusB y x
 
 
 

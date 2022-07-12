@@ -31,6 +31,7 @@ test-suite test-b-test
     default-language: Haskell2010
     build-depends:    QuickCheck,
                       coverage-report,
+                      package-b,
                       tasty,
                       tasty-hunit,
                       tasty-quickcheck
