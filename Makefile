@@ -17,7 +17,7 @@ clean: ##
 	rm -rf dist-newstyle/build
 
 test: ##
-	cabal v2-test all
+	cabal v2-test all -v3
 
 # report/complete.tix: report
 # 	hpc combine ${BASE}${TEST_A_TIX} ${BASE}${TEST_B_TIX} --output $@ --verbosity 2

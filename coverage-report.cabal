@@ -3,6 +3,12 @@ name:               coverage-report
 version:            0.1.0.0
 license:            NONE
 
+library package-b
+    exposed-modules:  MyLibB
+    build-depends:    base ^>=4.14.3.0
+    hs-source-dirs:   package-b/src
+    default-language: Haskell2010
+
 library
     exposed-modules:  MyLib
     build-depends:    base ^>=4.14.3.0
