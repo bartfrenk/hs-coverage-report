@@ -12,8 +12,10 @@ main :: IO ()
 main = defaultMain tests
 
 tests :: TestTree
-tests = testProperty "add x y = add y x" prop_minusIsAlmostCommutatitive
-
+tests = testGroup "Group"
+  [ testProperty "add x y = add y x" prop_minusIsAlmostCommutatitive
+  , testProperty "add x y = add y x" prop_minusBIsAlmostCommutatitive
+  ]
 
 prop_minusIsAlmostCommutatitive :: Int -> Int -> Property
 prop_minusIsAlmostCommutatitive x y = minus x y === - minus y x
